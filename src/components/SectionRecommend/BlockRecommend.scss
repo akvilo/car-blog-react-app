@@ -1,0 +1,53 @@
+@use '../../styles/main.scss';
+@use '../../styles/mixins.scss';
+
+.block-recommendation {
+    @include mixins.background-image;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 440px;
+
+    .block-recommendation__description {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-light);
+        box-sizing: border-box;
+        padding: 60px 20px 30px 20px;
+        line-height: 24px;
+        box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.6);
+        gap: 15px;
+        width: 90%;
+        height: 249px;
+        bottom: 0;
+        transform: translateY(50%);
+        border-radius: 5px;
+
+        .block_recommendation__description-category {
+            @include mixins.vehicle-category
+        }
+
+        .block-recommendation__description-name {
+            color: var(--color-dark);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .block-recommendation__description-info,
+        .block-recommendation__description-company {
+            color: var(--color-gray);
+            font-size: 0.875rem;
+        }
+
+        .block-recommendation__description-company {
+            font-style: italic;
+        }
+
+        .block-recommendation__description-info {
+        }
+    }
+}

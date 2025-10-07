@@ -1,0 +1,12 @@
+@use '../../styles/main.scss';
+@use '../../styles/mixins.scss';
+
+.nav {
+    &-list {
+        @include mixins.flex-center;
+        gap: 35px;
+    }
+    &-item {
+        cursor: pointer;
+    }
+}

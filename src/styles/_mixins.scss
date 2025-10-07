@@ -1,0 +1,51 @@
+@use 'sass:math';
+@mixin hide {
+    opacity: 0;
+    visibility: none;
+}
+
+@mixin show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else  {
+    display: flex;
+  }
+
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin vehicle-category {
+    @include flex-center;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 0.75rem;
+    background: var(--color-blue);
+    width: 62px;
+    height: 22px;
+    border-radius: 3px;
+}
+
+@mixin background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

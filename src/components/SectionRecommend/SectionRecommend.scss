@@ -1,0 +1,20 @@
+@use '../../styles/main.scss';
+@use '../../styles/mixins.scss';
+
+
+.section-recommend {
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+    margin-top: 50px;
+    width: 100vw;
+    height: auto;
+
+    .section-recommend__main {
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        width: 770px;
+        height: auto;
+    }
+}

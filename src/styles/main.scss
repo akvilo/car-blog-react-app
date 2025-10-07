@@ -1,0 +1,15 @@
+@use './variables'; 
+@use './mixins' as *;
+@use './fonts';
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'PTSans';
+    color: var(--color-light);
+    padding: 0;
+    margin: 0;
+}

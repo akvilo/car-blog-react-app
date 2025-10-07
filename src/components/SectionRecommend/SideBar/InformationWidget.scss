@@ -1,0 +1,59 @@
+@use '../../../styles/main.scss';
+@import '../../../styles/mixins';
+
+.sidebar__information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 430px;
+    gap: 10px;
+
+    .sidebar__information-image {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .sidebar__information-name {
+        color: var(--color-dark-10);
+        font-weight: bold;
+        font-size: 1.125rem;
+    }
+
+    .sidebar__information-about {
+        font-size: 0.875rem;
+        font-style: italic;
+        color: var(--color-gray-70);
+    }
+
+    .sidebar__information-description {
+        color: var(--color-gray);
+        font-size: 0.925rem;
+        font-size: var(--color-gray);
+        margin-top: 15px
+    }
+
+    .sidebar__information-continue {
+        @include flex-center;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background: var(--color-dark-10);
+        border-radius: 5px;
+        border: none;
+        font-size: 0.875rem;
+        margin-top: 20px;
+        transition: all 0.3s ease-in;
+        
+        &:hover {
+            background: var(--color-gray);
+        }
+    }
+}

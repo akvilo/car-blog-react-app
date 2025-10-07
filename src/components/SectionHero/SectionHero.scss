@@ -1,0 +1,21 @@
+@use '../../styles/main.scss';
+@use '../../styles/mixins.scss';
+
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100vw;
+    height: 560px;
+    overflow: visible;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 25px;
+        width: 1170px;
+        height: 100%;
+
+    }
+}
