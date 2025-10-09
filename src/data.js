@@ -56,7 +56,7 @@ export const cars = [
         image: chevroletSilverado,
         infoRecommendation: `The Chevrolet Silverado is a powerful and reliable pickup truck built for hard work and adventure. 
         With its strength and durability, it’s ready for any challenge on or off the road.`
-    }, 
+    },      
     {
         name: 'McLaren P1',
         desc: `The McLaren P1 is a high-performance hybrid supercar.

@@ -32,17 +32,6 @@
     height: $size;
 }
 
-@mixin vehicle-category {
-    @include flex-center;
-    position: absolute;
-    left: 20px;
-    top: 25px;
-    font-size: 0.75rem;
-    background: var(--color-blue);
-    width: 62px;
-    height: 22px;
-    border-radius: 3px;
-}
 
 @mixin background-image {
     background-size: cover;

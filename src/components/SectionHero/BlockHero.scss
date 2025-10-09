@@ -10,15 +10,13 @@
     cursor: pointer;
     transition: 0.2s all ease-in;
     box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.6);
+    color: var(--color-light);
+
     &.active {
         transform: scale(1.2);
         z-index: 1;
     }
-
-    .hero__category {
-        @include mixins.vehicle-category
-    }
-
+    
     .hero__information {
         position: absolute;
         display: flex;

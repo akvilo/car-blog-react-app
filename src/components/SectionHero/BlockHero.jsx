@@ -1,8 +1,11 @@
-import { useState } from 'react'
 import './BlockHero.scss'
+import Category from '../Category'
+
+import { useState } from 'react'
+
 
 export default function BlockHero({width, height, carName, carDesc, carImage}) {
-    const [blockState, setBlockState] = useState('')
+    const [blockState, setBlockState] = useState(null)
     function handleHover() {
         setBlockState('active')
     }
@@ -11,12 +14,12 @@ export default function BlockHero({width, height, carName, carDesc, carImage}) {
     }
     return(
         <div 
-        className={`block-hero ${blockState}`}
+        className={`block-hero ${blockState === null ? "" : blockState}`}
         style={{width: `${width}px`, height: `${height}px`, backgroundImage: `url(${carImage})`}}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
         >
-            <span className='hero__category vehicle-category'>Vehicle</span>
+        <Category className="hero__category">Vehicle</Category>
             <div className="hero__information">
                 <span className="hero__information-name">{carName}</span>
                 <span className="hero__information-description">{carDesc}</span>

@@ -27,9 +27,6 @@
         transform: translateY(50%);
         border-radius: 5px;
 
-        .block_recommendation__description-category {
-            @include mixins.vehicle-category
-        }
 
         .block-recommendation__description-name {
             color: var(--color-dark);
@@ -45,9 +42,6 @@
 
         .block-recommendation__description-company {
             font-style: italic;
-        }
-
-        .block-recommendation__description-info {
         }
     }
 }

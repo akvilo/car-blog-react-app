@@ -9,7 +9,6 @@ import { useState } from "react"
 
 export default function SectionRecommend() {
     const [active, setActive] = useState(`1`)
-            console.log(+active*5-5)
 
     return(
         <section className="section-recommend">
