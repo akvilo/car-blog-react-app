@@ -3,13 +3,25 @@ import Page from './Page'
 import { cars } from '@/data'
 import usePagination from '@/hooks/usePagination'
 
-const PaginationRecommend = ({ active, setActive }) => {
-    let countBlock = cars.length
+const PaginationRecommend = ({ active, setActive, userTags }) => {
+    let countBlock = counterCarsOffer()
+
     const pages = []
     let page = 1
-    const totalPages = Math.ceil(countBlock / 5)
+    let totalPages = Math.ceil(countBlock / 5)
     
     const { goToPage, nextPage, prevPage } = usePagination(active, setActive, totalPages)
+
+    function counterCarsOffer() {
+        if (userTags != '') {
+            const countPages = cars
+            .filter((car) => userTags.some(cars => Object.values(cars).includes(car.carTag)))
+            return countPages
+        }
+        else {
+            return cars.length
+        }
+    }
 
     pages.push(
         <Page 

@@ -4,7 +4,7 @@ import './SectionRecommend.scss'
 import React from "react"
 import SectionRecommendMain from "./SectionRecommendMain"
 
-import { cars, carTags } from '../../data.js'
+import { cars } from '../../data.js'
 import { useState } from "react"
 
 const SectionRecommend = () => {
@@ -14,6 +14,7 @@ const SectionRecommend = () => {
     return(
         <section className="section-recommend">
             <SectionRecommendMain 
+            userTags = {userTags}
             active = {active}
             setActive = {setActive}
             >
@@ -39,8 +40,8 @@ const SectionRecommend = () => {
             ))}
             </SectionRecommendMain>
             <SideBar 
-            userTags = {userTags}
-            setUserTags = {setUserTags}
+                userTags = {userTags}
+                setUserTags = {setUserTags}
             />
         </section>
     )
