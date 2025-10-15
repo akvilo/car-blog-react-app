@@ -2,13 +2,13 @@ import './Header.scss';
 import search from '../../assets/search.png';
 import Nav from '../Nav/Nav';
 
-export default function Header() {
+const Header = () => {
     return(
         <header>
             <a 
             href="/" 
             className='header__logo'
-            aria-label='Return to home button'
+            aria-label='return__button'
             >
                 <span className='header__logo-title'>Premium</span>
                 <span className='header__logo-subtitle'>CAR</span>
@@ -18,7 +18,7 @@ export default function Header() {
             />
             <button 
             className='header__search-button'
-            aria-label='Search button'
+            aria-label='search__button'
             >
                 <img 
                 src={search} 
@@ -28,3 +28,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header

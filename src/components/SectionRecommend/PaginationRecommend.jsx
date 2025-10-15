@@ -3,44 +3,47 @@ import Page from './Page'
 import { cars } from '@/data'
 import usePagination from '@/hooks/usePagination'
 
-    export default function PaginationRecommend({ active, setActive }) {
-        let countBlock = cars.length
-        const pages = []
-        let page = 1
-        const totalPages = Math.ceil(countBlock / 5)
-        const { goToPage, nextPage, prevPage } = usePagination(active, setActive, totalPages)
+const PaginationRecommend = ({ active, setActive }) => {
+    let countBlock = cars.length
+    const pages = []
+    let page = 1
+    const totalPages = Math.ceil(countBlock / 5)
+    
+    const { goToPage, nextPage, prevPage } = usePagination(active, setActive, totalPages)
 
-        pages.push(
-            <Page 
+    pages.push(
+        <Page 
+        isActive = {active === `${page}`}
+        key = {page}
+        page = {page}
+        onClick = {goToPage}
+        style = {{display: 'flex'}}
+    />)
+    
+    page++
+    
+    for(countBlock; countBlock>5; countBlock -= 5) {
+         pages.push(
+            <Page
             isActive = {active === `${page}`}
             key = {page}
             page = {page}
             onClick = {goToPage}
-            style = {{display: 'flex'}}
+            style = {page < 4 || page === totalPages ? {display: 'flex'} : {display: 'none'}}
         />)
         page++
         
-        for(countBlock; countBlock>5; countBlock -= 5) {
-             pages.push(
-                <Page
-                isActive = {active === `${page}`}
-                key = {page}
-                page = {page}
-                onClick = {goToPage}
-                style = {page < 4 || page === totalPages ? {display: 'flex'} : {display: 'none'}}
-            />)
-            page++
-            
-            if(page>3 && page <5) {
-                pages.push(<button key = {'dots'} className="section-recommend__pagination-page">...</button>)  
-            }
+        if(page>3 && page <5) {
+            pages.push(<button key = {'dots'} className="section-recommend__pagination-page">...</button>)  
         }
+    }
 
-         return(
-            <div className="section-recommend__pagination">
-                <button className="section-recommend__pagination-back" onClick={prevPage}>{`<`}</button>
-                {pages}
-                <button className="section-recommend__pagination-next" onClick={nextPage}>{`>`}</button>
-            </div>
+     return(
+        <div className="section-recommend__pagination">
+            <button className="section-recommend__pagination-back" onClick={prevPage}>{`<`}</button>
+            {pages}
+            <button className="section-recommend__pagination-next" onClick={nextPage}>{`>`}</button>
+        </div>
         )
     }
+export default PaginationRecommend

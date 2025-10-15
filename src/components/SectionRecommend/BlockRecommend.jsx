@@ -1,7 +1,7 @@
 import './BlockRecommend.scss'
 import Category from '../Category'
 
-export default function BlockRecommend({carName, carDesc, carImage, carInfo}) {
+const BlockRecommend = ({carName, carDesc, carImage, carInfo}) => {
 
         
     return (
@@ -18,3 +18,5 @@ export default function BlockRecommend({carName, carDesc, carImage, carInfo}) {
         </div>
     )
 }
+
+export default BlockRecommend

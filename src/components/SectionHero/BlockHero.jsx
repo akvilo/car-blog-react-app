@@ -4,7 +4,7 @@ import Category from '../Category'
 import { useState } from 'react'
 
 
-export default function BlockHero({width, height, carName, carDesc, carImage}) {
+const BlockHero = ({width, height, carName, carDesc, carImage}) => {
     const [blockState, setBlockState] = useState(null)
     function handleHover() {
         setBlockState('active')
@@ -27,3 +27,5 @@ export default function BlockHero({width, height, carName, carDesc, carImage}) {
         </div>
     )
 }
+
+export default BlockHero

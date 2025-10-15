@@ -1,4 +1,4 @@
-export default function Page({page, onClick, isActive, style}) {
+const Page = ({page, onClick, isActive, style}) => {
     return(
         <button 
             key = {page} 
@@ -9,3 +9,5 @@ export default function Page({page, onClick, isActive, style}) {
         </button>
     )
 }
+
+export default Page

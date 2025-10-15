@@ -1,7 +1,8 @@
 import './InformationWidget.scss'
 import LeonHunt from '../../../assets/person/LeonHunt.jpg';
+import Button from '@/components/Button/Button';
 
-export default function InformationWidget() {
+const InformationWidget = () => {
     return (
         <div className="sidebar__information">
             <img 
@@ -16,7 +17,12 @@ export default function InformationWidget() {
                 Cooking is the way I express my creative side to the world. 
                 Welcome to my Kitchen Corner on…
             </p>
-            <button className="sidebar__information-continue">Continue Reading</button>
+            <Button
+            className='sidebar__information-continue'
+            width="100%"
+            >Continue Reading</Button>
         </div>
     )
 }
+
+export default InformationWidget

@@ -2,7 +2,7 @@ import BlockHero from "./BlockHero"
 import './SectionHero.scss'
 import { cars } from '../../data.js'
 
-export default function SectionHero() {
+const SectionHero = () => {
     return(
         <section className="hero">
             <div className="hero__inner">
@@ -45,3 +45,5 @@ export default function SectionHero() {
         </section>
     )
 }
+
+export default SectionHero

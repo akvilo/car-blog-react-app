@@ -1,4 +1,4 @@
-@use '../../../styles/main.scss';
+@use '../../../styles/variables.scss';
 @import '../../../styles/mixins';
 
 .sidebar__information {
@@ -37,23 +37,6 @@
         color: var(--color-gray);
         font-size: 0.925rem;
         font-size: var(--color-gray);
-        margin-top: 15px
-    }
-
-    .sidebar__information-continue {
-        @include flex-center;
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        background: var(--color-dark-10);
-        border-radius: 5px;
-        border: none;
-        font-size: 0.875rem;
-        margin-top: 20px;
-        transition: all 0.3s ease-in;
-        
-        &:hover {
-            background: var(--color-gray);
-        }
+        margin-top: 15px;
     }
 }

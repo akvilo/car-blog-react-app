@@ -4,11 +4,12 @@ import './SectionRecommend.scss'
 import React from "react"
 import SectionRecommendMain from "./SectionRecommendMain"
 
-import { cars } from '../../data.js'
+import { cars, carTags } from '../../data.js'
 import { useState } from "react"
 
-export default function SectionRecommend() {
+const SectionRecommend = () => {
     const [active, setActive] = useState(`1`)
+    const [userTags, setUserTags] = useState([])
 
     return(
         <section className="section-recommend">
@@ -19,6 +20,14 @@ export default function SectionRecommend() {
             {
                 cars
                 .filter((car, id) => id < Number(active)*5 && id > Number(active)*5-6)
+                .filter((car) => {
+                    if(userTags != '') {
+                        return userTags.some(cars => Object.values(cars).includes(car.carTag))
+                    }
+                    else {
+                        return true
+                    }
+                })
                 .map((car, id) => (
                 <BlockRecommend
                 key={id}
@@ -29,7 +38,12 @@ export default function SectionRecommend() {
                 />
             ))}
             </SectionRecommendMain>
-            <SideBar />
+            <SideBar 
+            userTags = {userTags}
+            setUserTags = {setUserTags}
+            />
         </section>
     )
 }
+
+export default SectionRecommend

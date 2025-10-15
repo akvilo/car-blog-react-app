@@ -1,6 +1,6 @@
 import './Nav.scss';
 
-export default function Nav({className}) {
+const Nav = ({className}) => {
     return(
     <nav className= {`nav ${className}__nav`}>
         <ul className='nav-list'>
@@ -13,3 +13,5 @@ export default function Nav({className}) {
     </nav>
     )
 }
+
+export default Nav

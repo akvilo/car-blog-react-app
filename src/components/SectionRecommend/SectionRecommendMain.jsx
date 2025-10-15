@@ -4,7 +4,7 @@ import PaginationRecommend from "./PaginationRecommend"
 import React from "react"
 import { cars } from '../../data.js'
 
-export default function SectionRecommendMain({children, active, setActive}) {
+const SectionRecommendMain = ({children, active, setActive}) => {
     return(
         <div className="section-recommend__main">
             {children}
@@ -15,3 +15,5 @@ export default function SectionRecommendMain({children, active, setActive}) {
         </div>
     )
 }
+
+export default SectionRecommendMain

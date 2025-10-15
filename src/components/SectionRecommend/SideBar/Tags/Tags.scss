@@ -1,0 +1,70 @@
+@import '../../../../styles/variables';
+
+.sidebar__tags {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    
+    h3 {
+        font-size: 1.125rem;
+        color: var(--color-dark-20);
+    }
+
+    .sidebar__tags-items {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 25px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .tags__burger {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        align-content: flex-start;
+        column-gap: 15px;
+        left: 110%;
+        width: 300px;
+        box-sizing: border-box;
+        padding: 0px 15px 20px 15px;
+        border-radius: 6px;
+        height: 300px;
+        background: var(--color-dark-10);
+
+        &.active {
+            animation: 0.3s BurgerActive;
+        }
+
+        &.animate {
+            animation: 0.3s BurgerDisable;
+        }
+    }
+}
+
+@keyframes BurgerActive {
+    from {
+        scale: (0.2);
+        margin-left: -50%;
+    }
+
+    to {
+        scale: (1);
+        margin-left: 0;
+    }
+}
+
+@keyframes BurgerDisable {
+        from {
+        scale: (1);
+        margin-left: 0%;
+    }
+
+    to {
+        scale: (0.1);
+        margin-left: -50%;
+    }
+}
+

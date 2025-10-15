@@ -6,12 +6,27 @@ import toyotaSupra from './assets/vehicle/toyotaSupra.jpg'
 import mcLarenP1 from './assets/vehicle/McLaren.jpg'
 import chevroletSilverado from './assets/vehicle/ChevroletSilverado.jpg'
 
+export const carTags = [
+    {
+        carTag: "Sport"
+    },
+    {
+        carTag: "SUV"
+    },
+    {
+        carTag: "Luxury"
+    },
+    {
+        carTag: "Truck"
+    },
+]
+
 export const cars = [
     {
         name: 'Mercedes-Benz E-Class',
         desc: 'Luxury sedan, elegant design with advanced safety and comfort features',
         image: mercedesE,
-
+        carTag: carTags[2].carTag
     },
     {
         name: 'Dodge Challenger',
@@ -21,7 +36,8 @@ export const cars = [
         combining timeless design with modern performance. Its bold exterior, 
         powerful engine options, and unmistakable roar make every drive unforgettable. 
         Built for those who crave speed, style, 
-        and pure adrenaline.`
+        and pure adrenaline.`,
+        carTag: carTags[0].carTag
     },
     {
         name: 'Audi RS6',
@@ -32,7 +48,8 @@ export const cars = [
          With a 591-hp V8 engine, 
          quattro all-wheel drive, 
          and advanced tech features, 
-         it offers thrilling acceleration and exceptional handling.`
+         it offers thrilling acceleration and exceptional handling.`,
+        carTag: carTags[1].carTag
     },
     {
         name: 'Dodge Charger',
@@ -42,12 +59,14 @@ export const cars = [
         a true American muscle car with a sleek design and powerful performance. 
         Equipped with a V8 engine, 
         it delivers an exhilarating driving experience, 
-        combining strength with style.`
+        combining strength with style.`,
+        carTag: carTags[2].carTag
     },
     {
         name: 'Toyota Supra A90',
         desc: 'Legendary sports car, praised for performance, precision, and tuning potential',
         image: toyotaSupra,
+        carTag: carTags[0].carTag
     },  
     {
         name: 'Chevrolet Silverado 2016',
@@ -55,7 +74,8 @@ export const cars = [
         Built for tough jobs and adventures. Ready for any challenge.`,
         image: chevroletSilverado,
         infoRecommendation: `The Chevrolet Silverado is a powerful and reliable pickup truck built for hard work and adventure. 
-        With its strength and durability, it’s ready for any challenge on or off the road.`
+        With its strength and durability, it’s ready for any challenge on or off the road.`,
+        carTag: carTags[3].carTag
     },      
     {
         name: 'McLaren P1',
@@ -65,5 +85,6 @@ export const cars = [
         infoRecommendation: `The McLaren P1 is a cutting-edge hybrid hypercar that combines breathtaking speed with advanced technology. 
         Designed for both road and track, 
         it delivers an exhilarating driving experience.`,
+        carTag: carTags[0].carTag
     }, 
 ] 
