@@ -1,0 +1,22 @@
+.sidebar__social {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 520px;
+
+    .sidebar__social-collage {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+        height: 77%;
+        
+        .social-collage_image {
+            cursor: pointer;
+            width: 130px;
+            height: 130px;
+        }
+    }
+    
+}
