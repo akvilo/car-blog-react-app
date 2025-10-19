@@ -4,11 +4,11 @@
 .car-card {
     display: flex;
     flex-direction: column;
-    position: relative;
     gap: 15px;
 
     .car-card__main {
         display: flex;
+        position: relative;
         height: 200px; 
         width: 100%;
 
@@ -24,6 +24,24 @@
             width: 100%;
             border-radius: 5px;
         }
+
+            .last-car-card__button,
+            .first-car-card__button {
+                position: absolute;
+                cursor: pointer;
+                right: -15px;
+                top: 40%;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: none;
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+
+            .first-car-card__button  {
+                left: -15px;
+            }
     }
 
     .car-card__description {
@@ -42,6 +60,7 @@
         color: var(--color-dark);
         transition: 0.3s all ease-in;
     }
+
     .car-card__author {
         color: var(--color-gray);
         font-size: 0.875rem;

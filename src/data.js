@@ -66,6 +66,7 @@ export const cars = [
         name: 'Toyota Supra A90',
         desc: 'Legendary sports car, praised for performance, precision, and tuning potential',
         image: toyotaSupra,
+        infoRecommendation: `SOMETHING TEXT`,
         carTag: carTags[0].carTag
     },  
     {

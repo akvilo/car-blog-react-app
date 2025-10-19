@@ -10,7 +10,6 @@ export default function usePagination(active, setActive, pagesCount) {
         const goToPage = (page) => {
             setActive(page)
             scroll()
-            console.log(active)
         }
 
         function nextPage() {
