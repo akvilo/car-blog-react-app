@@ -1,0 +1,50 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.car-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 15px;
+
+    .car-card__main {
+        display: flex;
+        height: 200px; 
+        width: 100%;
+
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+ 
+
+        .car-card__main-image {
+            @include mixins.background-image;
+ 
+            object-fit: cover;
+            height: 200px; 
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .car-card__description {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: var(--color-dark);  
+        cursor: pointer;       
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            color: var(--color-blue);
+        }
+    }
+
+    .car-card__information {
+        color: var(--color-dark);
+        transition: 0.3s all ease-in;
+    }
+    .car-card__author {
+        color: var(--color-gray);
+        font-size: 0.875rem;
+        font-style: italic;
+    }
+}
