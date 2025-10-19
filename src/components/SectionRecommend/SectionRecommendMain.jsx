@@ -1,8 +1,6 @@
-import BlockRecommend from "./BlockRecommend"
 import './SectionRecommend.scss'
 import PaginationRecommend from "./PaginationRecommend"
 import React from "react"
-import { cars } from '../../data.js'
 
 const SectionRecommendMain = ({children, active, setActive, userTags}) => {
     return(

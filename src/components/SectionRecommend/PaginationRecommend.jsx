@@ -9,11 +9,10 @@ const PaginationRecommend = ({ active, setActive, userTags }) => {
     const pages = []
     let page = 1
     let totalPages = Math.ceil(countBlock / 5)
-    
     const { goToPage, nextPage, prevPage } = usePagination(active, setActive, totalPages)
 
     function counterCarsOffer() {
-        if (userTags != '') {
+        if (userTags.length > 0) {
             const countPages = cars
             .filter((car) => userTags.some(cars => Object.values(cars).includes(car.carTag)))
             return countPages
@@ -25,22 +24,23 @@ const PaginationRecommend = ({ active, setActive, userTags }) => {
 
     pages.push(
         <Page 
-        isActive = {active === `${page}`}
+        isActive = {active === page}
         key = {page}
         page = {page}
-        onClick = {goToPage}
+        onClick = {() => goToPage(1)}
         style = {{display: 'flex'}}
     />)
     
     page++
     
     for(countBlock; countBlock>5; countBlock -= 5) {
+        const id = page
          pages.push(
             <Page
-            isActive = {active === `${page}`}
+            isActive = {active === page}
             key = {page}
             page = {page}
-            onClick = {goToPage}
+            onClick = {() => goToPage(id)}
             style = {page < 4 || page === totalPages ? {display: 'flex'} : {display: 'none'}}
         />)
         page++

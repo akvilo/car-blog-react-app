@@ -1,4 +1,4 @@
-import mercedesE from './assets/vehicle/mercedesE.svg'
+import mercedesE from './assets/vehicle/mercedesE.jpg'
 import dodgeChallenger from './assets/vehicle/DodgeChallenger.jpg'
 import audiQ7 from './assets/vehicle/audiQ7.svg'
 import dodgeCharger from './assets/vehicle/DodgeCharger.jpg'

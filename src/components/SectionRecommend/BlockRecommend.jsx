@@ -3,7 +3,6 @@ import Category from '../Category'
 
 const BlockRecommend = ({carName, carDesc, carImage, carInfo}) => {
 
-        
     return (
         <div 
         className="block-recommendation"

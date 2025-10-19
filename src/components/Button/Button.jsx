@@ -7,6 +7,7 @@ const Button = (props) => {
         height = '50px',
         children,
         onClick,
+        type = 'button',
     } = props
 
     return(
@@ -15,6 +16,7 @@ const Button = (props) => {
         key={className}
         style={{width: `${width}`, height: `${height}`}}
         onClick={onClick}
+        type={type}
         >{children}</button>
     )
 }

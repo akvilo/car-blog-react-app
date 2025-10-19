@@ -1,14 +1,14 @@
+import './SectionRecommend.scss'
+
 import BlockRecommend from "./BlockRecommend"
 import SideBar from "./SideBar/SideBar"
-import './SectionRecommend.scss'
-import React from "react"
 import SectionRecommendMain from "./SectionRecommendMain"
 
 import { cars } from '../../data.js'
 import { useState } from "react"
 
 const SectionRecommend = () => {
-    const [active, setActive] = useState(`1`)
+    const [active, setActive] = useState(1)
     const [userTags, setUserTags] = useState([])
 
     return(
@@ -20,9 +20,9 @@ const SectionRecommend = () => {
             >
             {
                 cars
-                .filter((car, id) => id < Number(active)*5 && id > Number(active)*5-6)
+                .filter((car, id) => id < active*5 && id > active*5-6)
                 .filter((car) => {
-                    if(userTags != '') {
+                    if(userTags.length > 0) {
                         return userTags.some(cars => Object.values(cars).includes(car.carTag))
                     }
                     else {
@@ -30,12 +30,12 @@ const SectionRecommend = () => {
                     }
                 })
                 .map((car, id) => (
-                <BlockRecommend
-                key={id}
-                carName={car.name}
-                carDesc={car.desc}
-                carImage={car.image}
-                carInfo={car.infoRecommendation}
+                    <BlockRecommend
+                    key={id}
+                    carName={car.name}
+                    carDesc={car.desc}
+                    carImage={car.image}
+                    carInfo={car.infoRecommendation}
                 />
             ))}
             </SectionRecommendMain>

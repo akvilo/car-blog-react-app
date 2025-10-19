@@ -19,12 +19,11 @@ const Tags = (props) => {
 
     function handleClickChooseTags() {
         {listBurgerIsActive ? disableListBurger() : setListBurgerIsActive(true)}
-        console.log(cars)
-        console.log(userTags)
 
         function disableListBurger() {
             const burgerMenu = burgerRef.current
             burgerMenu.classList.add('animate')
+            
             setTimeout(() => {
                 burgerMenu.classList.remove('animate')
                 setListBurgerIsActive(false)
