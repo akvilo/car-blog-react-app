@@ -67,7 +67,7 @@ export const cars = [
         desc: 'Legendary sports car, praised for performance, precision, and tuning potential',
         image: toyotaSupra,
         infoRecommendation: `SOMETHING TEXT`,
-        carTag: carTags[0].carTag
+        carTag: carTags[1].carTag
     },  
     {
         name: 'Chevrolet Silverado 2016',
@@ -86,6 +86,6 @@ export const cars = [
         infoRecommendation: `The McLaren P1 is a cutting-edge hybrid hypercar that combines breathtaking speed with advanced technology. 
         Designed for both road and track, 
         it delivers an exhilarating driving experience.`,
-        carTag: carTags[0].carTag
+        carTag: carTags[1].carTag
     }, 
 ] 
